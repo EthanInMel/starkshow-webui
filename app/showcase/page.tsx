@@ -11,7 +11,7 @@ export default function ShowcasePage() {
 			<div className="mt-10 flex flex-row justify-around w-4/5">
 				{
 					cases.map(item => (
-						<Card className="max-w-[400px]">
+						<Card className="max-w-[400px]" key={item.name}>
 							<CardHeader className="flex gap-3">
 								<Image
 									alt="nextui logo"
