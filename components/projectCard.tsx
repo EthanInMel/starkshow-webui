@@ -34,23 +34,19 @@ export const ProjectCard: FC<projectCardProps> = ({
                 />
                 <div className={'absolute z-20 top-[15px] left-[19px] rounded-full border-1 min-w-[60px] text-lg ' + (theme == 'light' ? 'border-black' : '')}><span>{item.catagory}</span></div>
             </div>
-            <div className="flex flex-col mt-10">
+            <div className="flex flex-col">
                 <div className="w-[480px] m-auto">
                     <div className="flex flex-col items-center">
                         <p className="text-3xl font-semibold">{item.name}</p>
-                        <p className={theme == 'light' ? 'text-black/50' : 'text-white/50'}>{item.brief}</p>
+                        <p className={(theme == 'light' ? 'text-black/50' : 'text-white/50 ') + ' overflow-auto'}>{item.brief}</p>
                     </div>
                     <Divider className="my-2" />
-                    <div className="flex flex-row items-center justify-between">
-                        <Image
-                            alt="nextui logo"
-                            src={"images/clock.svg"}
-                        />
+                    <div className="flex flex-row items-center justify-between">      
                         <p>{item.event}</p>
                         <Button isIconOnly variant="faded" onClick={() => router.push('/showcase/' + item.name)}>
                             <Image
                                 alt="nextui logo"
-                                src={"images/go.svg"}
+                                src={"/images/go.svg"}
                             />
                         </Button>
 

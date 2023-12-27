@@ -24,7 +24,7 @@ export default [
         
         Scalability and Future-Proofing: WatchLiQ Token (WATCH) is built to scale, allowing for the seamless integration of new features and enhancements as the watch-based NFT lending space continues to evolve.`,
         source: '',
-        catagory: 'AA'
+        category: 'AA'
     },
     {
         id: 1,
@@ -51,7 +51,7 @@ export default [
         
         Scalability and Future-Proofing: WatchLiQ Token (WATCH) is built to scale, allowing for the seamless integration of new features and enhancements as the watch-based NFT lending space continues to evolve.`,
         source: '',
-        catagory: 'AA'
+        category: 'AA'
     },
     {
         id: 2,
@@ -78,7 +78,7 @@ export default [
         
         Scalability and Future-Proofing: WatchLiQ Token (WATCH) is built to scale, allowing for the seamless integration of new features and enhancements as the watch-based NFT lending space continues to evolve.`,
         source: '',
-        catagory: 'AA'
+        category: 'AA'
     },
     // {
     //     id: 3,
