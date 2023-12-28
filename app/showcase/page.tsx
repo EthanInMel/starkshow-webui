@@ -12,7 +12,7 @@ export default function ShowcasePage() {
 			<div className="mt-10 flex flex-row flex-wrap justify-around">
 				{
 					cases.map(item => (
-						<ProjectCard item={item} />
+						<ProjectCard item={item} key={item.id}/>
 					))
 				}
 			</div>

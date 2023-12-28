@@ -3,23 +3,23 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { title } from "@/components/primitives";
 import { Card, CardBody, CardFooter, CardHeader, Divider, Link, Image } from "@nextui-org/react";
 import projects from '../../../config/projects';
-import { ProjectCard } from "@/components/projectCard";
+import { ProjectCard, ProjectConfig } from "@/components/projectCard";
 import { useTheme } from 'next-themes';
 
 export default function ShowcasePage({ params }: { params: { project: string } }) {
     const { theme, setTheme } = useTheme();
 
-    const getProject = () => {
-        let one;
+    const getProject = (): ProjectConfig => {
+        let result: ProjectConfig = {} as ProjectConfig;
         projects.forEach(element => {
             if (element.name == params.project) {
-                one = element;
+                result = element;
             }
         })
-        return one;
+        return result;
     }
 
-    const proj: { bgImage: string } = useMemo(() => getProject()
+    const proj: ProjectConfig = useMemo(() => getProject()
         , []);
 
 

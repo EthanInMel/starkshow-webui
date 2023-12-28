@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { title } from "@/components/primitives";
 import { Card, CardBody, CardFooter, CardHeader, Divider, Link, Image } from "@nextui-org/react";
 import events from '../../../config/events';
-import { ProjectCard } from "@/components/projectCard";
+import { ProjectCard, ProjectConfig } from "@/components/projectCard";
 import { useTheme } from 'next-themes';
 import projects from '../../../config/projects';
 import { EventConfig } from '@/components/eventCard';
@@ -11,38 +11,38 @@ import { EventConfig } from '@/components/eventCard';
 export default function EventPage({ params }: { params: { event: string } }) {
     const { theme, setTheme } = useTheme();
 
-    const getEvent = () => {
-        let one;
+    const getEvent = (): EventConfig => {
+        let result: EventConfig = {} as EventConfig;
         events.forEach(element => {
             if (element.name == params.event) {
-                one = element;
+                result = element as EventConfig;
             }
         })
-        return one;
+        return result;
     }
 
-    const getProject = (id: number) => {
-        let one;
+    const getProject = (id: number): ProjectConfig => {
+        let result: ProjectConfig = {} as ProjectConfig;
         projects.forEach(element => {
             if (element.id == id) {
-                one = element;
+                result = element;
             }
         })
-        return one;
+        return result;
     }
 
     const event: EventConfig = useMemo(() => getEvent()
         , []);
 
-    const getProjects = () => {
-        let projects = [];
+    const getProjects = (): ProjectConfig[] => {
+        let projects: ProjectConfig[] = [];
         event.projectIds.forEach(id => {
             projects.push(getProject(id));
         })
         return projects;
     }
 
-    const projs: [] = useMemo(() => getProjects()
+    const projs: ProjectConfig[] = useMemo(() => getProjects()
         , []);
 
 
@@ -83,7 +83,7 @@ export default function EventPage({ params }: { params: { event: string } }) {
                     <div className="flex flex-row flex-wrap justify-between">
                         {
                             projs.map(item => (
-                                <ProjectCard item={item} />
+                                <ProjectCard item={item} key={item.id} />
                             ))
                         }
                     </div>

@@ -12,9 +12,20 @@ import { FC } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from 'next/navigation'
 
+export interface ProjectConfig {
+    id: number
+    name: string
+    brief: string
+    cardImage: string
+    bgImage: string
+    description: string,
+    category: string,
+    event: string
+}
+
 export interface projectCardProps {
     className?: string;
-    item: {}
+    item: ProjectConfig
 }
 
 export const ProjectCard: FC<projectCardProps> = ({
@@ -32,7 +43,7 @@ export const ProjectCard: FC<projectCardProps> = ({
                     src={item.cardImage}
                     width={480}
                 />
-                <div className={'absolute z-20 top-[15px] left-[19px] rounded-full border-1 min-w-[60px] text-lg ' + (theme == 'light' ? 'border-black' : '')}><span>{item.catagory}</span></div>
+                <div className={'absolute z-20 top-[15px] left-[19px] rounded-full border-1 min-w-[60px] text-lg ' + (theme == 'light' ? 'border-black' : '')}><span>{item.category}</span></div>
             </div>
             <div className="flex flex-col">
                 <div className="w-[480px] m-auto">

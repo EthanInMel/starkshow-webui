@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import events from '..//config/events';
-import { EventCard } from "@/components/eventCard";
+import { EventCard, EventConfig } from "@/components/eventCard";
 
 export default function Home() {
 	return (
@@ -55,7 +55,7 @@ export default function Home() {
 				<div className="mt-10 flex flex-row flex-wrap justify-between">
 					{
 						events.map(item => (
-							<EventCard item={item} />
+							<EventCard item={item as EventConfig} key={item.id}/>
 						))
 					}
 				</div>

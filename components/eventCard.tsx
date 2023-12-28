@@ -44,7 +44,6 @@ export const EventCard: FC<EventCardProps> = ({
                     src={item.cardImage}
                     width={480}
                 />
-                <div className={'absolute z-20 top-[15px] left-[19px] rounded-full border-1 min-w-[60px] text-lg ' + (theme == 'light' ? 'border-black' : '')}><span>{item.catagory}</span></div>
             </div>
             <div className="flex flex-row">
                 <div className="w-[480px] m-auto">
