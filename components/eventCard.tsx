@@ -37,7 +37,7 @@ export const EventCard: FC<EventCardProps> = ({
     const router = useRouter();
 
     return (
-        <div className={"w-[528px] h-[488px] rounded-3xl mt-10 " + (theme == 'light' ? 'bg-gray-100' : 'bg-[#343434]')} key={item.id} >
+        <div className={"w-[528px] h-[488px] rounded-3xl mt-10 mx-auto " + (theme == 'light' ? 'bg-gray-100' : 'bg-[#343434]')} key={item.id} >
             <div className="flex relative m-[25px] rounded-2xl h-[270px] w-[480px]">
                 <Image
                     alt="nextui logo"
