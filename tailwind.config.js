@@ -11,14 +11,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        
+
       }
     },
     screens: {
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '788px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '1024px',
@@ -32,5 +32,18 @@ module.exports = {
     }
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [nextui(
+    {
+      themes: {
+        light: {
+          layout: {},
+          colors: {}
+        },
+        dark: {
+          layout: {},
+          colors: {background: '#0C0D4E'}
+        },
+      }
+    }
+  )],
 }

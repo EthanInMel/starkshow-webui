@@ -55,7 +55,7 @@ export default function EventPage({ params }: { params: { event: string } }) {
                 radius='none'
                 className='w-full'
             />
-            <div className={'z-20 bottom-[15px] min-h-[120px] text-lg flex flex-col w-full pt-[20px]'}>
+            <div className={'z-20 bottom-[15px] min-h-[120px] text-lg flex flex-col w-full pt-[20px] px-[20px] sm:px-[200px]'}>
                 <div className="flex flex-col justify-between items-start w-full">
                     <p className="text-4xl font-bold">{event.name}</p>
                     <p className={(theme == 'light' ? 'text-black/50' : 'text-white/50 ') + ' overflow-auto'}>{event.brief}</p>
@@ -80,7 +80,7 @@ export default function EventPage({ params }: { params: { event: string } }) {
                         <p className="text-4xl font-bold mx-[24px]">Projects</p>
                         <span className='w-full border-none bg-[#dbdbdb] h-[2px]'></span>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-between">
+                    <div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"}>
                         {
                             projs.map(item => (
                                 <ProjectCard item={item} key={item.id} />

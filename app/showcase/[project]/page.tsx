@@ -24,7 +24,7 @@ export default function ShowcasePage({ params }: { params: { project: string } }
 
 
     return (
-        <div className="flex flex-col  items-center w-full">
+        <div className="flex flex-col items-center w-full">
             <Image
                 alt="nextui logo"
                 src={proj?.bgImage}
@@ -32,7 +32,7 @@ export default function ShowcasePage({ params }: { params: { project: string } }
                 radius='none'
                 className='w-full'
             />
-            <div className={'z-20 bottom-[15px] min-h-[120px] text-lg flex flex-col w-full pt-[20px] px-[60px]'}>
+            <div className={'z-20 bottom-[15px] min-h-[120px] text-lg flex flex-col w-full pt-[20px] px-[20px] sm:px-[200px]'}>
                 <div className="flex flex-col justify-between items-start w-full">
                     <p className="text-4xl font-bold">{proj.name}</p>
                     <p className={(theme == 'light' ? 'text-black/50' : 'text-white/50 ') + ' overflow-auto text-left'}>{proj.brief}</p>

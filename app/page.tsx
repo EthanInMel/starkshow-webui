@@ -14,7 +14,7 @@ export default function Home() {
 				<h1 className={title({ color: "blue" })}>StarkShow&nbsp;</h1>
 				<br />
 				<h1 className={title()}>
-					
+
 				</h1>
 				<h2 className={subtitle({ class: "mt-4" })}>
 					Showcase for Starknet projects and events.
@@ -52,10 +52,10 @@ export default function Home() {
 				<h1 className={title({ color: "blue" })}>Upcoming Events</h1>
 			</div>
 			<div className="flex flex-col  w-4/6">
-				<div className="mt-10 flex flex-row flex-wrap justify-between">
+				<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"}>
 					{
 						events.map(item => (
-							<EventCard item={item as EventConfig} key={item.id}/>
+							<EventCard item={item as EventConfig} key={item.id} />
 						))
 					}
 				</div>

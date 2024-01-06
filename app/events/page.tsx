@@ -9,10 +9,10 @@ export default function ShowcasePage() {
 	return (
 		<div className="flex flex-col">
 			<h1 className={title()} >Events</h1>
-			<div className="mt-10 flex flex-row flex-wrap justify-around">
+			<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-2"}>
 				{
 					events.map(item => (
-						<EventCard item={item as EventConfig} key={item.id}/>
+						<EventCard item={item as EventConfig} key={item.id} />
 					))
 				}
 			</div>
