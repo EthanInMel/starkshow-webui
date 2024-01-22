@@ -35,7 +35,7 @@ export const ProjectCard: FC<projectCardProps> = ({
     const router = useRouter();
 
     return (
-        <div className={"w-[528px] h-[500px] rounded-3xl mt-10 " + (theme == 'light' ? 'bg-gray-100' : 'bg-[rgba(255,255,255,0.15)]')} key={item.id} >
+        <div className={"w-[528px] h-[500px] rounded-3xl mt-10  mx-auto " + (theme == 'light' ? 'bg-gray-100' : 'bg-[rgba(255,255,255,0.15)]')} key={item.id} >
             <div className="flex relative m-[25px] rounded-2xl h-[270px] w-[480px]">
                 <button onClick={() => router.push('/showcase/' + item.id)} className="w-full h-full">
                     <Image

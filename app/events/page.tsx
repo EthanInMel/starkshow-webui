@@ -5,7 +5,7 @@ import { Card, CardBody, CardFooter, CardHeader, Divider, Link, Image } from "@n
 import events from '../../config/events';
 import { EventCard, EventConfig } from "@/components/eventCard";
 
-export default function ShowcasePage() {
+export default function EventsPage() {
 	return (
 		<div className="flex flex-col">
 			<h1 className={title()} >Events</h1>

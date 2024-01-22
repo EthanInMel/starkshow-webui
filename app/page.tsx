@@ -9,19 +9,20 @@ import { EventCard, EventConfig } from "@/components/eventCard";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title({ color: "blue" })}>StarkShow&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
+		<>
+			<section className="flex flex-col items-center justify-center gap-4 w-f md:h-[1400px]" style={{ background: `url(/images/homebg.png)`, backgroundSize: 'cover' }}>
 
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Showcase for Starknet projects and events.
-				</h2>
-			</div>
+			</section>
+			<div className="flex flex-col items-center justify-center mt-[-100px]">
+				<div className="inline-block text-center justify-center">
+					<span className="text-9xl ">Make <span className='text-blue-500'>Starknet</span> great.</span>
+					<br />
+					<h2 className='text-4xl mt-[20px]'>
+						Space of Starknet early creative projects.
+					</h2>
+				</div>
 
-			{/* <div className="flex gap-3">
+				{/* <div className="flex gap-3">
 				<Link
 					isExternal
 					as={NextLink}
@@ -48,18 +49,19 @@ export default function Home() {
 					</span>
 				</Snippet>
 			</div> */}
-			<div className="inline-block max-w-lg text-center justify-center mt-[100px] ">
-				<h1 className={title({ color: "blue" })}>Upcoming Events</h1>
-			</div>
-			<div className="flex flex-col  w-4/6">
-				<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"}>
-					{
-						events.map(item => (
-							<EventCard item={item as EventConfig} key={item.id} />
-						))
-					}
+				<div className="inline-block max-w-lg text-center justify-center mt-[100px] ">
+					<h1 className={title({ color: "blue" })}>Upcoming Events</h1>
+				</div>
+				<div className="flex flex-col  w-4/6">
+					<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"}>
+						{
+							events.map(item => (
+								<EventCard item={item as EventConfig} key={item.id} />
+							))
+						}
+					</div>
 				</div>
 			</div>
-		</section>
+		</>
 	);
 }

@@ -9,7 +9,7 @@ export default function ShowcasePage() {
 	return (
 		<div className="flex flex-col">
 			<h1 className={title()} >Find a Project</h1>
-			<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"}>
+			<div className={"mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-2"}>
 				{
 					cases.map(item => (
 						<ProjectCard item={item} key={item.id}/>
