@@ -5,19 +5,34 @@ import { Card, CardBody, CardFooter, CardHeader, Divider, Link, Image } from "@n
 import projects from '../../../config/projects';
 import { ProjectCard, ProjectConfig } from "@/components/projectCard";
 import { useTheme } from 'next-themes';
+import Markdown from 'react-markdown';
 
-export default function ShowcasePage({ params }: { params: { project: string } }) {
+export default function ShowcasePage({ params }: { params: { project: number } }) {
     const { theme, setTheme } = useTheme();
+    const [details, setDetails] = useState("");
 
     const getProject = (): ProjectConfig => {
         let result: ProjectConfig = {} as ProjectConfig;
         projects.forEach(element => {
-            if (element.name == params.project) {
+            if (element.id == params.project) {
                 result = element;
             }
         })
+        getData(result);
         return result;
     }
+
+    async function getData(event: ProjectConfig) {
+        const res = await fetch(event.description);
+        // The return value is *not* serialized
+        // You can return Date, Map, Set, etc.
+        if (!res.ok) {
+          // This will activate the closest `error.js` Error Boundary
+          throw new Error("Failed to fetch data");
+        } else {
+          setDetails(await res.text());
+        }
+      }
 
     const proj: ProjectConfig = useMemo(() => getProject()
         , []);
@@ -50,7 +65,7 @@ export default function ShowcasePage({ params }: { params: { project: string } }
                         <p className="text-4xl font-bold mx-[24px]">Details</p>
                         <span className='w-full border-none bg-[#dbdbdb] h-[2px]'></span>
                     </div>
-                    <span className='text-left'>{proj.description}</span>
+                    <Markdown className='text-left'>{details}</Markdown>
                 </div>
 
             </div>

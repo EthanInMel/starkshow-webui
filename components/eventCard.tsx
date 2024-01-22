@@ -11,7 +11,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from 'next/navigation'
 
 export interface EventConfig {
-    id: number
+    id: string
     name: string
     brief: string
     cardImage: string
@@ -37,7 +37,7 @@ export const EventCard: FC<EventCardProps> = ({
     return (
         <div className={"w-[528px] h-[488px] rounded-3xl mt-10 mx-auto " + (theme == 'light' ? 'bg-gray-100' : 'bg-[rgba(255,255,255,0.15)]')} key={item.id} >
             <div className="flex relative m-[25px] rounded-2xl h-[270px] w-[480px]">
-                <button onClick={() => router.push('/events/' + item.name)} className="w-full h-full">
+                <button onClick={() => router.push('/events/' + item.id)} className="w-full h-full">
                     <Image
                         alt="nextui logo"
                         src={item.cardImage}
@@ -63,7 +63,7 @@ export const EventCard: FC<EventCardProps> = ({
                                 <p>→</p>
                                 <p>{item.endDate}</p>
                             </div>
-                            <Button variant="faded" onClick={() => router.push('/events/' + item.name)} className={(theme == 'light' ? 'bg-[rgba(255,255,255,0.25)] ' : 'bg-[rgba(255,255,255,0.25)] ') + "w-[130px] h-[42px]"}>
+                            <Button variant="faded" onClick={() => router.push('/events/' + item.id)} className={(theme == 'light' ? 'bg-[rgba(255,255,255,0.25)] ' : 'bg-[rgba(255,255,255,0.25)] ') + "w-[130px] h-[42px]"}>
                                 Learn more
                                 <Image
                                     src={"/images/go.svg"}

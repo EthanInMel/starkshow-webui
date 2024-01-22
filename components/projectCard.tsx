@@ -37,7 +37,7 @@ export const ProjectCard: FC<projectCardProps> = ({
     return (
         <div className={"w-[528px] h-[500px] rounded-3xl mt-10 " + (theme == 'light' ? 'bg-gray-100' : 'bg-[rgba(255,255,255,0.15)]')} key={item.id} >
             <div className="flex relative m-[25px] rounded-2xl h-[270px] w-[480px]">
-                <button onClick={() => router.push('/showcase/' + item.name)} className="w-full h-full">
+                <button onClick={() => router.push('/showcase/' + item.id)} className="w-full h-full">
                     <Image
                         alt="nextui logo"
                         src={item.cardImage}
@@ -55,7 +55,7 @@ export const ProjectCard: FC<projectCardProps> = ({
                     <Divider className="my-2" />
                     <div className="flex flex-row items-center justify-between mt-[20px] bg-transparent">
                         <p>{item.event}</p>
-                        <button onClick={() => router.push('/showcase/' + item.name)}>
+                        <button onClick={() => router.push('/showcase/' + item.id)}>
                             <Image
                                 alt="nextui logo"
                                 src={"/images/go.svg"}
