@@ -98,6 +98,20 @@ export default function EventPage({ params }: { params: { event: string } }) {
           </div>
         </div>
         <Divider className="my-2 h-[2px]" />
+
+        <div className="flex flex-col itmes-start my-[60px]">
+          <div className="flex flex-row items-center my-[60px]">
+            <Image
+              alt="nextui logo"
+              src={"/images/arrow.png"}
+              width={60}
+              height={60}
+            />
+            <p className="text-4xl font-bold mx-[24px]">Details</p>
+            <span className="w-full border-none bg-[#dbdbdb] h-[2px]"></span>
+          </div>
+          <Markdown className={""}>{details}</Markdown>
+        </div>
         <div className="flex flex-col itmes-start">
           <div className="flex flex-row items-center my-[60px]">
             <Image
@@ -111,26 +125,13 @@ export default function EventPage({ params }: { params: { event: string } }) {
           </div>
           <div
             className={
-              "mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
+              "mt-10 grid auto-rows-auto grid-cols-1 lg:grid-cols-2"
             }
           >
             {projs.map((item) => (
               <ProjectCard item={item} key={item.id} />
             ))}
           </div>
-        </div>
-        <div className="flex flex-col itmes-start my-[60px]">
-          <div className="flex flex-row items-center my-[60px]">
-            <Image
-              alt="nextui logo"
-              src={"/images/arrow.png"}
-              width={60}
-              height={60}
-            />
-            <p className="text-4xl font-bold mx-[24px]">Details</p>
-            <span className="w-full border-none bg-[#dbdbdb] h-[2px]"></span>
-          </div>
-          <Markdown className={""}>{details}</Markdown>
         </div>
       </div>
     </div>
