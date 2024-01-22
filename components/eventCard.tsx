@@ -19,7 +19,7 @@ export interface EventConfig {
     startDate: string,
     endDate: string,
     details: string,
-    projectIds: [number]
+    projectIds: [string]
 }
 
 export interface EventCardProps {

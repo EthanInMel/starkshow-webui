@@ -32,7 +32,7 @@ export default function EventPage({ params }: { params: { event: string } }) {
     return result;
   };
 
-  const getProject = (id: number): ProjectConfig => {
+  const getProject = (id: string): ProjectConfig => {
     let result: ProjectConfig = {} as ProjectConfig;
     projects.forEach((element) => {
       if (element.id == id) {

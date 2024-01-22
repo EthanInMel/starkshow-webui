@@ -7,7 +7,7 @@ import { ProjectCard, ProjectConfig } from "@/components/projectCard";
 import { useTheme } from 'next-themes';
 import Markdown from 'react-markdown';
 
-export default function ShowcasePage({ params }: { params: { project: number } }) {
+export default function ShowcasePage({ params }: { params: { project: string } }) {
     const { theme, setTheme } = useTheme();
     const [details, setDetails] = useState("");
 

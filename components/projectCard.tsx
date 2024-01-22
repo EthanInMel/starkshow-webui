@@ -12,7 +12,7 @@ import { useTheme } from "next-themes";
 import { useRouter } from 'next/navigation'
 
 export interface ProjectConfig {
-    id: number
+    id: string
     name: string
     brief: string
     cardImage: string
