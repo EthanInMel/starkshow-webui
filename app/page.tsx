@@ -10,7 +10,7 @@ import { EventCard, EventConfig } from "@/components/eventCard";
 export default function Home() {
 	return (
 		<>
-			<section className="flex flex-col items-center justify-center gap-4 w-f md:h-[1400px]" style={{ background: `url(/images/homebg.png)`, backgroundSize: 'cover' }}>
+			<section className="flex flex-col items-center justify-center gap-4 w-f md:h-[85vh]" style={{ background: `url(/images/homebg.png)`, backgroundSize: 'cover' }}>
 
 			</section>
 			<div className="flex flex-col items-center justify-center mt-[-100px]">
