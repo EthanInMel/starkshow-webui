@@ -72,13 +72,13 @@ export const Navbar = () => {
 					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
 						<TwitterIcon className="text-default-500" />
 					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+					{/* <Link isExternal href={siteConfig.links.discord} aria-label="Discord">
 						<DiscordIcon className="text-default-500" />
-					</Link>
+					</Link> */}
 					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
 					</Link>
-					<ThemeSwitch />
+					{/* <ThemeSwitch /> */}
 				</NavbarItem>
 				{/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
 				<NavbarItem className="hidden md:flex">
@@ -86,11 +86,11 @@ export const Navbar = () => {
             isExternal
 						as={Link}
 						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
+						href={siteConfig.links.github}
 						startContent={<HeartFilledIcon className="text-danger" />}
 						variant="flat"
 					>
-						Sponsor
+						Submit
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
