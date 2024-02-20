@@ -91,7 +91,7 @@ export default function EventPage({ params }: { params: { event: string } }) {
             {event.brief}
           </p>
           <div className="flex flex-row min-w-[234px] justify-between items-center">
-            <Image alt="nextui logo" src={"/images/clock.svg"} />
+            <Image alt="nextui logo" src={"/images/clock.svg"} className="mr-[5px]"/>
             <span className="font-semibold my-[10px]">
               {event.startDate} → {event.endDate}
             </span>
