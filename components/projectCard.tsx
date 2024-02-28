@@ -42,6 +42,8 @@ export const ProjectCard: FC<projectCardProps> = ({
                         alt="nextui logo"
                         src={item.cardImage}
                         width={480}
+                        height={270}
+                        className="max-h-[270px]"
                     />
                 </button>
                 <div className={'absolute z-20 top-[15px] left-[19px] rounded-full border-1 min-w-[60px] text-lg ' + (theme == 'light' ? 'border-black' : '')}><span>{item.category}</span></div>

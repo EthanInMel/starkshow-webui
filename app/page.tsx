@@ -62,7 +62,7 @@ export default function Home() {
 				</Snippet>
 			</div> */}
         <div className="inline-block max-w-lg text-center justify-center mt-[100px] ">
-          <h1 className={title({ color: "blue" })}>Upcoming Events</h1>
+          <h1 className={title({ color: "white" })}>Upcoming Events</h1>
         </div>
         <div className="flex flex-col  w-4/6">
           <div
