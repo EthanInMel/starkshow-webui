@@ -73,7 +73,7 @@ export const siteConfig = {
 	],
 	links: {
 		github: "https://github.com/EthanInMel/starkshow-webui",
-		twitter: "https://twitter.com/getnextui",
+		twitter: "https://twitter.com/StarknetAstroCN",
 		docs: "https://nextui.org",
 		discord: "https://discord.gg/9b6yyZKmH4",
 		sponsor: "https://patreon.com/jrgarciadev"
