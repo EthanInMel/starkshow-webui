@@ -45,7 +45,7 @@ export default function ShowcasePage({ params }: { params: { project: string } }
                 src={proj?.bgImage}
                 removeWrapper
                 radius='none'
-                className='w-full'
+                className='w-full max-h-[900px]'
             />
             <div className={'z-20 bottom-[15px] min-h-[120px] text-lg flex flex-col w-full pt-[20px] px-[20px] sm:px-[200px]'}>
                 <div className="flex flex-col justify-between items-start w-full">
